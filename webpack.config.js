@@ -5,7 +5,10 @@ const _src = path.resolve(__dirname, 'src');
 const _dist = path.resolve(__dirname, 'dist');
 
 module.exports = {
-  entry: path.resolve(_src, 'app.js'),
+  entry: [
+    'whatwg-fetch',
+    path.resolve(_src, 'app.js'),
+  ],
   output: {
     filename: 'app.bundle.js',
     path: _dist,
